@@ -1,11 +1,10 @@
-You said:
 # Student Database Management System
 
 A comprehensive application to manage student records with functionalities to add, edit, delete, search, display, save, and reverse records. The database is persistent, ensuring data is retained between sessions using file handling.
 
 ## Features
 - **Dynamic Memory Allocation:** Efficiently manage student records in memory.
-- **File Handling:** Persistent storage in student_DB.txt.
+- **File Handling:** Persistent storage in `student_DB.txt`.
 - **Error Handling:** Prevents duplicate Student IDs and validates user inputs.
 - **Modular Design:** Each functionality is implemented in separate files for maintainability.
 
@@ -14,20 +13,20 @@ A comprehensive application to manage student records with functionalities to ad
 ## Compilation and Execution
 
 ### Windows
-- Compile: mingw32-make
-- Execute: ./student_DB
+- Compile: `mingw32-make`
+- Execute: `./student_DB`
 
 ### Linux
-- Compile: make
-- Execute: ./student_DB
+- Compile: `make`
+- Execute: `./student_DB`
 
 ---
 
 ## Menu Options
 
-### 1. Add a New Student Record (a/A)
+### 1. Add a New Student Record (`a/A`)
 - Add student details:
-  - **Student ID** (e.g., V24HE2A1)
+  - **Student ID** (e.g., `V24HE2A1`)
   - **Name**
   - **Date of Birth (DOB)**
   - **Percentage** (Matriculation, Inter/Diploma, Graduation)
@@ -35,16 +34,16 @@ A comprehensive application to manage student records with functionalities to ad
   - **Email ID**
 - *Note:* Duplicate Student IDs are not allowed.
 
-### 2. Print Records (p/P)
+### 2. Print Records (`p/P`)
 - Display all student records in the database.
 
-### 3. Save the Database (s/S)
-- Save all current records to student_DB.txt.
+### 3. Save the Database (`s/S`)
+- Save all current records to `student_DB.txt`.
 
-### 4. Delete a Record (d/D)
+### 4. Delete a Record (`d/D`)
 - Delete a specific record using the Student ID.
 
-### 5. Edit a Record (e/E)
+### 5. Edit a Record (`e/E`)
 - Modify details of an existing record:
   - Edit Name
   - Edit Date of Birth
@@ -53,27 +52,26 @@ A comprehensive application to manage student records with functionalities to ad
   - Edit Email ID
   - Display Updated Data
 
-### 6. Find a Student (f/F)
+### 6. Find a Student (`f/F`)
 - Search for a student by ID, Name, or other attributes.
 
-### 7. Reverse Records (r/R)
+### 7. Reverse Records (`r/R`)
 - Reverse the order of displayed records without altering the database file.
 
-### 8. Quit (q/Q)
+### 8. Quit (`q/Q`)
 - Exit the application. All data is automatically saved to the file.
 
 ---
 
 ## File Handling
-- **File Used:** student_DB.txt
+- **File Used:** `student_DB.txt`
   - Data is loaded into memory at startup.
   - Changes are saved back to the file on exit or using the save option.
 
 ---
 
-
 ## Folder Structure
-plaintext
+```plaintext
 v24he2M14/
 ├── edit/
 │   ├── edit.c               // Functions to edit student records.
@@ -106,14 +104,14 @@ v24he2M14/
 ├── readme.txt               // Documentation for compilation and usage.
 ├── student_DB.txt           // Persistent storage for student records.
 └── Makefile                 // Build automation using `make`.
-
+```
 
 ---
 
 ## Example Usage
 
 ### Adding a New Student Record
-plaintext
+```plaintext
 Enter your choice: a
 
 Enter Student ID: V24HE2A1
@@ -124,14 +122,14 @@ Enter your contact number: 9876543210
 Enter Email ID: akash@example.com
 
 Record added successfully.
-
+```
 
 ---
 
 ## Notes for Linux Users
 
-Update the Makefile for Linux systems as follows:
-make
+Update the `Makefile` for Linux systems as follows:
+```make
 student_DB: main.o edit.o input.o delete.o file_operations.o find.o reverse.o print.o mylib.o
 	gcc -o student_DB main.o edit.o input.o delete.o file_operations.o find.o reverse.o print.o mylib.o
 
@@ -164,22 +162,23 @@ mylib.o: mylib/myLib.c
 
 clean:
 	rm -f *.o student_DB
-
+```
 
 To compile:
-bash
+```bash
 make
-
+```
 
 ---
 
 ## Cleanup
 To remove compiled files and reset the environment:
-bash
+```bash
 mingw32-make clean   # For Windows
 make clean           # For Linux
-
+```
 
 ---
 
 ## Enjoy using the Student Database Management System!
+
